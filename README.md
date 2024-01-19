@@ -6,22 +6,22 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv("C:\\Users\\Lenovo\\Downloads\\archive\\All_Countries_and_Economies.csv")
 data.head(5)
-# Find the country with the highest population
-highest_population_country = data.loc[data["Population, total"].idxmax(), "Country"]
-print("Country with Highest Population:", highest_population_country)
 
-# Calculate the average life expectancy
-average_life_expectancy = data["Life expectancy at birth, total (years)"].mean()
-print("Average Life Expectancy:", average_life_expectancy)
 
-# Find the country with the highest GDP per capita
-highest_gdp_per_capita_country = data.loc[data["GDP per capita (current US$)"].idxmax(), "Country"]
-print("Country with Highest GDP per Capita:", highest_gdp_per_capita_country)
+selected_columns_2 = data[["GDP (current US$)", "GDP growth (annual %)"]].head(3)
+print(selected_columns_2)
 
-# Calculate the average proportion of seats held by women in national parliaments
-average_women_seats = data["Proportion of seats held by women in national parliaments (%)"].mean()
-print("Average Proportion of Seats Held by Women:", average_women_seats)
 
-# Find the country with the highest CO2 emissions per capita
-highest_co2_emissions_country = data.loc[data["CO2 emissions (metric tons per capita)"].idxmax(), "Country"]
-print("Country with Highest CO2 Emissions per Capita:", highest_co2_emissions_country)
+# Display 3 rows from the "Access to electricity (% of population)" and "Forest area (% of land area)" columns
+selected_columns_4 = data[["Access to electricity (% of population)", "Forest area (% of land area)"]].head(3)
+print(selected_columns_4)
+
+
+# Display 5 rows from the "Individuals using the Internet (% of population)" and "Proportion of seats held by women in national parliaments (%)" columns
+selected_columns_5 = data[["Individuals using the Internet (% of population)", "Proportion of seats held by women in national parliaments (%)"]].head(5)
+print(selected_columns_5)
+
+# Display 5 rows from the "Individuals using the Internet (% of population)" and "Proportion of seats held by women in national parliaments (%)" columns
+selected_columns_5 = data[["Individuals using the Internet (% of population)", "Proportion of seats held by women in national parliaments (%)"]].head(5)
+print(selected_columns_5)
+
